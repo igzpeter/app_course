@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+<div class="container_3">
+</div>
+
+
+<div class="container_1">
+
+    <table>
+        <tr>
+            <td id="btn_1" onclick="myFunction_clear()">BornToFood.com</td>
+              <td id="btn" onclick="myFunction_salades()">Salades</td>
+               <td id="btn" onclick="myFunction_pizzas()">Pizzas</td>
+         <td id="btn" onclick="myFunction_soupes()">Soupes</td>
+        
+        
+        
+      
+            <td id="btn" onclick="myFunction_desserts()">Dessert</td>
+             <td id="btn" onclick="myFunction_burgers()">Burgers</td>
+        <td id="btn" onclick="myFunction_cocktails()">Cocktails</td>
+         <td id="btn" onclick="">Mon Panier</td> 
+       
+    
+        </tr>
+    </table>
+    
+    </div>
+
+
+<div class="flex_box">
+
+<div class="container_2">
+        <div id="demo_1"></div>
+</div>
+
+<div class="container_4">
+      <div id="demo_3"></div>
+</div>
+    </div>
+<div class="flex_box_2">
+      <div id="demo_7"></div>
+        <div id="item"></div>
+
+        <div id="demo_9" class="container"></div>
+    </div>
+
+
+
+
+
+
+
+<script>
+
+//FUNCTION CLEAR BOUTTON
+function myFunction_clear(){
+
+
+document.getElementById("demo_1").innerHTML = 
+"";
+document.getElementById("demo_3").innerHTML = 
+"";
+document.getElementById("demo_7").innerHTML = 
+"";
+document.getElementById("demo_9").innerHTML = 
+"";
+document.getElementById("item").innerHTML = 
+"";
+}
+
+
+//FUNCTION ADD TO CHART
+function myFunction_chart(){
+  
+  document.getElementById("demo_7").innerHTML = 
+  "<div id='component_char_img'><img src='panier.png' width='220px' height='200px'></div>";
+
+
+}
+
+//FUNCTION AJOUT PANIER
+function myFunction_chart_ajout(){
+  var tableau_article_price = ["Salade_1: 5 Euros"];
+  
+
+  
+  document.getElementById("demo_7").innerHTML = 
+  "<div id='component_char_img'><img src='panier.png' width='220px' height='180px'></div>";
+
+    console.log(tableau_article_price);
+
+
+    document.getElementById("demo_9").innerHTML = 
+"<img src='panier_2.png' alt='Avatar' class='image' style='width:100%'><div class='middle'><div class='text'>Payer</div><div>";
+
+  var liste = document.createElement("ol");
+  liste.setAttribute('id', 'id_liste');
+  
+  var compo = document.createElement('div');
+  compo.setAttribute('id', 'component_div');
+  document.getElementById("item").appendChild(compo);
+
+
+  compo.appendChild(liste);
+
+  document.getElementById("item").appendChild(compo);
+
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(tableau_article_price);
+  node.appendChild(textnode);
+  document.getElementById("id_liste").appendChild(node);
+  console.log(liste, node);
+
+
+
+
+
+
+
+}
+
+//COMPONENT SALADES
+function myFunction_component_salade_1(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_1 :5 Euros</h1><img id='img_component' src='salade_2.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_salade_2(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_2 :5 Euros</h1><img id='img_component' src='salade_1.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+//COMPONENT SALADES
+function myFunction_component_salade_3(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_3 :5 Euros</h1><img id='img_component' src='salade_3.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_salade_4(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_4 :5 Euros</h1><img id='img_component' src='salade_4.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_salade_5(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_5 :5 Euros</h1><img id='img_component' src='salade_5.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+
+//COMPONENT SALADES
+function myFunction_component_salade_6(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_6 :5 Euros</h1><img id='img_component' src='salade_6.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+
+//COMPONENT SALADES
+function myFunction_component_salade_7(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_7 :5 Euros</h1><img id='img_component' src='salade_7.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_salade_8(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_salade_1_1","ingrédient_salade_1_2", "ingrédient_salade_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Salade_8 :5 Euros</h1><img id='img_component' src='salade_8.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT PIZZAS
+function myFunction_component_pizza_1(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_pizza_1_1","ingrédient_pizza_1_2", "ingrédient_pipzza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_1 :5 Euros</h1><img id='img_component' src='pizza_1.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_pizza_2(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_pizza_1_1","ingrédient_pizza_1_2", "ingrédient_pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_2 :5 Euros</h1><img id='img_component' src='pizza_2.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+//COMPONENT SALADES
+function myFunction_component_pizza_3(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_Pizza_1_1","ingrédient_Pizza_1_2", "ingrédient_Pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_3 :5 Euros</h1><img id='img_component' src='pizza_3.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_pizza_4(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_Pizza_1_1","ingrédient_Pizza_1_2", "ingrédient_Pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_4 :5 Euros</h1><img id='img_component' src='pizza_4.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+//COMPONENT SALADES
+function myFunction_component_pizza_5(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_Pizzza_1_1","ingrédient_Pizza_1_2", "ingrédient_pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_5 :5 Euros</h1><img id='img_component' src='pizza_5.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+
+//COMPONENT PIZZA
+function myFunction_component_pizza_6(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_Pizza_1_1","ingrédient_Pizza_1_2", "ingrédient_Pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_6 :5 Euros</h1><img id='img_component' src='pizza_6.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+
+//COMPONENT SALADES
+function myFunction_component_pizza_7(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_Pizza_1_1","ingrédient_Pizza_1_2", "ingrédient_Pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_7 :5 Euros</h1><img id='img_component' src='pizza_7.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+
+//COMPONENT SALADES
+function myFunction_component_pizza_8(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= image;
+  this.clef_temps = temps;
+  this.clef_espace =espace;
+}
+
+  // Create notes objects
+var croche = new note("ingrédient_Pizza_1_1","ingrédient_Pizza_1_2", "ingrédient_Pizza_1_3");
+
+
+//TITRE PLAT
+document.getElementById("demo_3").innerHTML = 
+"<div id='component'><h1 id='btn_titre' title='Description'>Pizza_8 :5 Euros</h1><img id='img_component' src='pizza_8.jpg' width='100px' height='100px'><ul id='btn_liste'><li>ingrédient_1</li><li>ingrédient_2</li><li>ingrédient_3</li><li>ingrédient_4</li><li>ingrédient_5</li><li>ingrédient_6</li><li>ingrédient_7</li><li>ingrédient_8</li><li>ingrédient_9</li><li>ingrédient_10</li><li>ingrédient_11</li><li>ingrédient_12</li></ul><h3 id='btn_char' onclick='myFunction_chart_ajout()'>Ajouter au panier</h3></div>";
+
+console.log(croche);
+}
+
+
+
+function myFunction_pizzas(){
+// CONSTRUCTOR FUCTION INGREDIENTS PIZZA
+function note(image, temps, espace) {
+  this.clef_image= [image];
+  this.clef_temps = [temps];
+  this.clef_espace = [espace];
+}
+
+  // CREATE OBJET NEW PIZZA
+var croche = new note("image",0.5, 1);
+
+
+//VIDER LES CONTAINERS
+document.getElementById("demo_3").innerHTML = 
+"" ;
+// DISPLAY GRID PIZZA
+document.getElementById("demo_1").innerHTML = 
+"<table id='btn_menu'><tr><td id='btn_3' onclick='myFunction_component_pizza_1()'>Pizza_1<td></tr><tr><td id='btn_3' onclick='myFunction_component_pizza_2()'>Pizza_2<td></tr><tr><td id='btn_3' onclick='myFunction_component_pizza_3()'>Pizza_3<td></tr><tr><td id='btn_3' onclick='myFunction_component_pizza_4()'>Pizza_4<td></tr><tr><td id='btn_3'  onclick='myFunction_component_pizza_5()'>Pizza_5<td></tr><tr><td id='btn_3' onclick='myFunction_component_pizza_6()'>Pizza_6<td></tr><tr><td id='btn_3' onclick='myFunction_component_pizza_7()'>Pizza_7<td></tr><tr><td id='btn_3' onclick='myFunction_component_pizza_8()'>Pizza_8<td></tr></table>" 
+
+console.log(croche);
+}
+
+
+//FUNCTION SALADES
+function myFunction_salades(){
+// CONSTRUCTOR FUNCTION FOR NOTE OBJET INGREDIENT SALADE
+function note(image, temps, espace) {
+  this.clef_image= [image];
+  this.clef_temps = [temps];
+  this.clef_espace = [espace];
+}
+
+  // CREATE NOTE OBJET NEW SALADE
+var croche = new note("image",1, 2);
+
+// VIDER LES CONTAINERS AVANT AFFICHAGE
+document.getElementById("demo_3").innerHTML = 
+"" ;
+
+
+//AFFICHAGE GRID SALADES
+document.getElementById("demo_1").innerHTML = 
+"<table id='btn_menu'><tr><td id='btn_3' onclick='myFunction_component_salade_1()'>Salade_1<td></tr><tr><td id='btn_3' onclick='myFunction_component_salade_2()'>Salade_2<td></tr><tr><td id='btn_3' onclick='myFunction_component_salade_3()'>Salade_3<td></tr><tr><td id='btn_3' onclick='myFunction_component_salade_4()'>Salade_4<td></tr><tr><td id='btn_3'  onclick='myFunction_component_salade_5()'>Salade_5<td></tr><tr><td id='btn_3' onclick='myFunction_component_salade_6()'>Salade_6<td></tr><tr><td id='btn_3' onclick='myFunction_component_salade_7()'>Salade_7<td></tr><tr><td id='btn_3' onclick='myFunction_component_salade_8()'>Salade_8<td></tr></table>" 
+  console.log(croche);
+}
+
+
+
+
+//FUNCTION 
+function myFunction_desserts(){
+// Constructor function for notes objects
+function note(image, temps, espace) {
+  this.clef_image= [image];
+  this.clef_temps = [temps];
+  this.clef_espace = [espace];
+}
+
+  // CREATE OBJET NEW DESSERT LISTE
+var croche = new note("image",1, 2);
+
+//VIDER LES CONTAINERS
+document.getElementById("demo_3").innerHTML = 
+"" ;
+// AFFICHAGE GRID DESSERTS
+document.getElementById("demo_1").innerHTML = 
+"<table id='btn_menu'><tr><td id='btn_3' onclick='myFunction_component_dessert_1()'>Dessert_1<td></tr><tr><td id='btn_3' onclick='myFunction_component_dessert_2()'>Dessert_2<td></tr><tr><td id='btn_3' onclick='myFunction_component_dessert_3()'>Dessert_3<td></tr><tr><td id='btn_3' onclick='myFunction_component_dessert_4()'>Dessert_4<td></tr><tr><td id='btn_3'  onclick='myFunction_component_dessert_5()'>Dessert_5<td></tr><tr><td id='btn_3' onclick='myFunction_component_dessert_6()'>Dessert_6<td></tr><tr><td id='btn_3' onclick='myFunction_component_dessert_7()'>Dessert_7<td></tr><tr><td id='btn_3' onclick='myFunction_component_dessert_8()'>Dessert_8<td></tr></table>" 
+console.log(croche);
+
+}
+
+
+//FUNCTION BURGERS
+function myFunction_burgers(){
+// CONSTRUCTOR FUNCTION FOR NOTE OBJET INGREDIENTS
+function note(image, temps, espace) {
+  this.clef_image= [image];
+  this.clef_temps = [temps];
+  this.clef_espace = [espace];
+}
+
+  // CREATE NEW OBJET BURGER
+var croche = new note("image",1.5, 3);
+
+
+//VIDER LES CONTAINERS
+document.getElementById("demo_3").innerHTML = 
+"" ;
+
+//AFFICHAGE GRID BURGERS
+document.getElementById("demo_1").innerHTML = 
+"<table id='btn_menu'><tr><td id='btn_3' onclick='myFunction_component_burger_1()'>Burger_1<td></tr><tr><td id='btn_3' onclick='myFunction_component_burger_2()'>Burger_2<td></tr><tr><td id='btn_3' onclick='myFunction_component_burger_3()'>Burger_3<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_4()'>Burger_4<td></tr><tr><td id='btn_3'  onclick='myFunction_component_soupe_5()'>Burger_5<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_6()'>Burger_6<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_7()'>Burger_7<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_8()'>Burger_8<td></tr></table>" 
+
+console.log(croche);
+
+}
+
+
+//FUNCTION COCKTAIL
+function myFunction_cocktails(){
+// CONSCTRUCTOR FOR NOTE OBJET INGREDIENTS
+function note(image, temps, espace) {
+  this.clef_image= [image];
+  this.clef_temps = [temps];
+  this.clef_espace = [espace];
+}
+
+  // CREATE OBJET INGREDIENT NEW COCKTAIL
+var croche = new note("image",2, 4);
+
+//VIDER LES CONTAINERS
+document.getElementById("demo_3").innerHTML = 
+"" ;
+
+//AFFICHAGE GRID COCKTAILS
+document.getElementById("demo_1").innerHTML = 
+"<table id='btn_menu'><tr><td id='btn_3' onclick='myFunction_component_cocktail_1()'>Cocktail_1<td></tr><tr><td id='btn_3' onclick='myFunction_component_cocktail_2()'>Cocktail_2<td></tr><tr><td id='btn_3' onclick='myFunction_component_cocktail_3()'>Cocktail_3<td></tr><tr><td id='btn_3' onclick='myFunction_component_cocktail_4()'>Cocktail_4<td></tr><tr><td id='btn_3'  onclick='myFunction_component_cocktail_5()'>Cocktail_5<td></tr><tr><td id='btn_3' onclick='myFunction_component_cocktail_6()'>Cocktail_6<td></tr><tr><td id='btn_3' onclick='myFunction_component_cocktail_7()'>Cocktail_7<td></tr><tr><td id='btn_3' onclick='myFunction_component_cocktail_8()'>Cocktail_8<td></tr></table>" 
+console.log(croche);
+}
+
+
+//FUNCTION SOUPES
+function myFunction_soupes(){
+// CONSTRUCTOR OBJET NOTE INGREDIENTS SOUPE
+function note(image, temps, espace) {
+  this.clef_image= [image];
+  this.clef_temps = [temps];
+  this.clef_espace = [espace];
+}
+
+  // CREATE INGREDIENT NEW SOUPE
+var croche = new note("image",2, 4);
+
+//VIDER LES CONTAINERS
+document.getElementById("demo_3").innerHTML = 
+"" ;
+
+//CREATE GRID SOUPES
+document.getElementById("demo_1").innerHTML = 
+"<table id='btn_menu'><tr><td id='btn_3' onclick='myFunction_component_soupe_1()'>Soupe_1<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_2()'>Soupe_2<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_3()'>Soupe_3<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_4()'>Soupe_4<td></tr><tr><td id='btn_3'  onclick='myFunction_component_soupe_5()'>Soupe_5<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_6()'>Soupe_6<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_7()'>Soupe_7<td></tr><tr><td id='btn_3' onclick='myFunction_component_soupe_8()'>Soupe_8<td></tr></table>" 
+console.log(croche);
+
+}
+
+</script>
+
+
+
+</body>
+</html>
